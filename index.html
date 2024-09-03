@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="/images-removebg-preview.png" sizes="16x16">
+    <title>Postman</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <ul class="horizontal-list">
+        <li>Home</li>
+        <li>Workspaces <i onclick="btnDownClick()" class="fa-solid fa-chevron-down"></i></li>
+<div id="overlay" class="overlay">
+    <div class="overlay-content">
+        <input id="overlayInput" placeholder="Search workspaces">
+        <button id="overlayButton">create workspaces</button>
+    </div>
+</div>
+
+
+        <li>API Network <i class="fa-solid fa-chevron-down"></i></li>
+      </ul>
+      <ul class="horizontal-list">
+        <li>
+          <i id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+          <input id="search" placeholder="Search Postman" />
+        </li>
+      </ul>
+      <ul class="horizontal-list">
+        <li><button id="invite">invite</button></li>
+        <li><i class="fa-solid fa-gear" onclick="btnSettingClick()"></i></li>
+
+        <div id="overlaysetting" class="overlaysetting">
+            <div class="overlaycontentsetting">
+                <input>
+            </div>
+        </div>
+        <li><i class="fa-regular fa-bell"></i></li>
+        <li>upgrade <i class="fa-solid fa-chevron-down"></i></li>
+      </ul>
+    </div>
+    <div class="horizontalView">
+      <div class="leftBody">
+        <ul class="leftBodyList">
+          <div class="leftDiv">
+            <center><i class="fa-solid fa-person-running"></i></center>
+            <center><li>Collections</li></center>
+          </div>
+          <div class="leftDiv">
+            <center><i class="fa-brands fa-usps"></i></center>
+            <center><li>Environments</li></center>
+          </div>
+          <div class="leftDiv">
+            <center><i class="fa-solid fa-server"></i></center>
+            <center><li>History</li></center>
+          </div>
+          <div class="leftDiv">
+            <center>
+              <li><i class="fa-solid fa-cookie"></i></li>
+            </center>
+          </div>
+        </ul>
+      </div>
+      <div class="inputDiv">
+        <div class="inputSelect1">
+          <select class="inputSelect" onchange="onBtnChange()">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+
+          <input id="urlInput" placeholder="Enter URL or paste text" />
+          <button id="sendBtn" onclick="btnClick()">send</button>
+        </div>
+        <div class="paramsDiv">
+          <ul class="paramsDiv-list">
+            <li>Params</li>
+            <li>Authorization</li>
+            <li>Headers (6)</li>
+            <li onclick="bodyClick()">Body</li>
+            <div id="overlayBody" class="overlayBody">
+                <!-- <div class="overlayBody-content"> -->
+                    <textarea id="overlayBodyText" rows="10" cols="80"></textarea>
+                    <!-- <button id="overlayButton">post</button> -->
+                <!-- </div> -->
+            </div>
+            <li>Scripts</li>
+            <li>Settings</li>
+          </ul>
+          <div class="content"></div>
+        </div>
+      </div>
+
+      <div class="rightBody">
+        <ul class="rightBodyList">
+          <li><i class="fa-solid fa-person-running"></i></li>
+          <li><i class="fa-brands fa-usps"></i></li>
+          <li><i class="fa-solid fa-server"></i></li>
+          <li><i class="fa-solid fa-cookie"></i></li>
+          <li><i class="fa-solid fa-vault"></i></li>
+          <li><i class="fa-solid fa-trash"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottomRight">
+      <ul class="horizontal-list">
+        <li><i class="fa-solid fa-person-running"></i> Postbot</li>
+        <li><i class="fa-brands fa-usps"></i> Runner</li>
+        <li><i class="fa-solid fa-server"></i> Start Proxy</li>
+        <li><i class="fa-solid fa-cookie"></i> Cookies</li>
+        <li><i class="fa-solid fa-vault"></i> Vault</li>
+        <li><i class="fa-solid fa-trash"></i> Trash</li>
+      </ul>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
